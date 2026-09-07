@@ -1,14 +1,12 @@
-
 version: 0.0
 os: linux
 
+files:
+  - source: /
+    destination: /var/www/html
+
 hooks:
   AfterInstall:
-    - location: dep.sh
-      timeout: 300
-      runas: root
-hooks:
-  AfterInstall:
-    - location: dep.sh
+    - location: scripts/dep.sh
       timeout: 300
       runas: root
