@@ -1,2 +1,8 @@
-#!/bin/bash
-systemctl restart apache2
+version: 0.0
+os: linux
+
+files:
+  - source: /index.html
+    destination: /var/www/html/
+
+file_exists_behavior: OVERWRITE
